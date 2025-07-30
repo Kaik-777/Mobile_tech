@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produto.css">
+    <link rel="icon" href="mini_img.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="img.png" width=110px height=100px>
+
+        <a href="#" style="color: ghostwhite; text-decoration: none;">
+            <div class="layout0">🔥 OFERTAS DO DIA</div>
+        </a>
+
+        <a href="#" style="color: ghostwhite; text-decoration: none;">
+            <div class="layout1">📱 SMARTPHONES</div>
+        </a>
+
+        <a href="#" style="color: ghostwhite; text-decoration: none;">
+            <div class="layout2">🎧 ACESSÓRIOS</div>
+        </a>
+
+        <div class="busca">
+            <form class="search-form" action="/pagina-de-resultados" method="get">
+                <input class="search-input" type="text" name="pesquisa" placeholder="Busca Mobile">
+                <button class="search-button" type="submit">Pesquisar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="link-voltar">← Voltar para a página inicial</a>
+
+    <div class="produto-container">
+
+        <div class="imagem-produto">
+            <img src="Produtos/MotoG42.jpg" alt="Motorola Moto G42" />
+        </div>
+
+        <div class="linha-vertical"></div>
+
+        <div class="info-produto">
+            <div class="descricao">
+                <a href="#">
+                    <strong>Motorola Moto G42 Azul 128GB</strong><br>
+                    4GB RAM, Tela de 6.4”, Câmera Traseira Tripla
+                </a>
+            </div>
+
+            <div class="preco">R$ 1.199,00</div>
+
+            <div class="detalhes">
+                <p>
+                    <strong>Tela:</strong> AMOLED de 6,4 polegadas com resolução de 2400x1080 pixels.<br>
+                    <strong>Processador:</strong> Octa-core de 2,4 GHz.<br>
+                    <strong>Memória RAM:</strong> 4 GB, com opção de expansão via microSD.<br>
+                    <strong>Armazenamento:</strong> 128 GB, com suporte para cartões microSD.<br>
+                    <strong>Câmera:</strong> Tríplice de 50 MP, com capacidade de gravar vídeos em Full HD.<br>
+                    <strong>Bateria:</strong> 5000 mAh com carregamento rápido de 18W.<br>
+                </p>
+            </div>
+
+            <div class="botoes">
+                <button class="botao-comprar">Comprar agora</button>
+                <br><br>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br>
+    <footer>
+        <p>
+        <address>
+            Visite-nos!<br>
+            Avenida Império do Sol Nascente, 350 2023<br>
+            Jardim Aurélia, Campinas, SP
+        </address>
+        </p>
+        <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const cards = document.querySelectorAll(".imagem-produto");
+
+                cards.forEach(card => {
+                    card.addEventListener("mouseover", () => {
+                        card.style.transform = "scale(1.05)";
+                        card.style.transition = "transform 0.2s";
+                        card.style.cursor = "pointer";
+                    });
+                    card.addEventListener("mouseout", () => {
+                        card.style.transform = "scale(1)";
+                    });
+                });
+            });
+        </script>
+
+</body>
+
+</html>

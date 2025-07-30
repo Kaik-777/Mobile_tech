@@ -1,0 +1,149 @@
+/* Corpo da página */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fonte principal */
+    margin: 0;             /* Remove margem externa da página */
+    padding: 0;            /* Remove preenchimento interno da página */
+}
+/* Cabeçalho principal / barra superior */
+.container {
+    display: flex;  /* Ativa o layout flexível (em linha) */
+    align-items: center;  /* Alinha verticalmente ao centro */
+    padding: 40px;  /* Espaço interno em todos os lados */
+    background-color: purple;  /* Cor de fundo roxa */
+    background-image: linear-gradient(to left, purple 25%, #5E17EB); /* Degradê da esquerda */
+    /* background-color: white;  /* Cor do texto branca */ 
+    font-size: 25px;  /* Tamanho da fonte */
+    font-weight: bold;  /* Deixa o texto em negrito */
+    letter-spacing: 2px;  /* Espaçamento entre letras */
+    /* flex-wrap: nowrap;  Impede quebra de linha (comentado) */
+}
+
+/* Bloco da barra de busca */
+.busca {
+    display: flex;  /* Layout flexível para os elementos da busca */
+    align-items: center;  /* Alinha verticalmente */
+    position: absolute;  /* Posiciona fora do fluxo normal */
+    right: 50px;  /* Distância da borda direita */
+    top: 65px;    /* Distância do topo */
+    background-color: white;  /* Fundo branco */
+    border-radius: 25px;  /* Bordas arredondadas */
+    padding: 10px 30px;  /* Espaço interno: cima/baixo 10px, lados 30px */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);  /* Sombra leve */
+}
+
+/* Formulário da busca */
+.search-form {
+    display: flex;  /* Organiza input e botão lado a lado */
+    align-items: center;  /* Centraliza verticalmente */
+    max-width: 300px;  /* Largura máxima do formulário */
+    margin: 0 auto;  /* Centraliza horizontalmente */
+    border: none;  /* Remove borda */
+    outline: none;  /* Remove borda ao focar */
+    background: transparent;  /* Fundo transparente */
+    font-size: 16px;  /* Tamanho da fonte */
+    width: 250px;  /* Largura total */
+}
+
+/* Campo de entrada (input) da busca */
+.search-input {
+    width: 100%;  /* Ocupa toda a largura disponível */
+    padding: 8px 20px;  /* Espaço interno: cima/baixo 8px, lados 20px */
+    border: 2px solid #ccc;  /* Borda cinza clara */
+    border-radius: 8px;  /* Bordas arredondadas */
+    background: transparent;  /* Fundo transparente */
+}
+
+/* Botão da busca */
+.search-button {
+    padding: 10px 16px;  /* Espaço interno do botão */
+    background-color: rgb(168, 24, 168);  /* Fundo roxo */
+    border: none;  /* Sem borda */
+    border-radius: 4px;  /* Cantos arredondados */
+    cursor: pointer;  /* Cursor em forma de mão */
+    background: transparent;  /* ⚠️ Substitui a cor acima por fundo transparente */
+    font-size: 18px;  /* Tamanho da fonte */
+    color: #030303;  /* Cor do texto (quase preto) */
+}
+
+/* Itens do menu superior */
+.layout0, .layout1, .layout2 {
+    padding-left: 25px;  /* Espaço à esquerda */
+}
+.imagem {
+    display: inline-block; /* Mostra como um bloco em linha (pode ter altura e largura definidas) */
+    max-width: 300px;       /* Largura máxima de 300 pixels */
+    height: auto;           /* Altura automática proporcional à largura */
+    max-width: 100%;        /* Sobrescreve o anterior: usa até 100% da largura do contêiner */
+}
+.linha-vertical {
+  width: 1px;          /* Espessura da linha */
+  height: 600px;       /* Altura da linha */
+  margin-left:10%;
+  background-color: black; /* Cor da linha */
+  margin: 0 10px;      /* Espaço lateral (opcional) */
+}
+.produto-container {
+    display: flex;                  /* Usa layout flexível em linha (lado a lado) */
+    align-items: flex-start;       /* Alinha os itens ao topo verticalmente */
+    justify-content: space-between;/* Espaça os itens igualmente com espaço entre eles */
+    gap: 30px;                     /* Espaço de 30px entre os itens */
+    max-width: 1000px;             /* Largura máxima do contêiner */
+    margin: 40px auto;             /* Margem de 40px em cima/baixo e centralizado horizontalmente */
+    padding: 0 20px;               /* Preenchimento de 20px apenas nas laterais */
+    font-family: 'Trebuchet MS';   /* Fonte usada no conteúdo */
+}
+.info-produto {
+    flex: 1; /* Ocupa o máximo de espaço disponível dentro do flex container */
+}
+.descricao {
+    font-size: 20px;     /* Tamanho do texto de 20px */
+    margin-bottom: 10px; /* Espaço inferior de 10px */
+    margin-left:20%;
+}
+.descricao a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: black;          /* Define a cor do link como preta */
+}
+.preco {
+    font-size: 30px;      /* Tamanho grande para destaque do preço */
+    font-weight: bold;    /* Negrito */
+    color: purple;        /* Cor roxa */
+    margin-bottom: 10px;  /* Espaço abaixo do preço */
+    margin-left:20%;
+    margin-top:10%;
+    margin-bottom: 10%;
+    font-family: Arial, sans-serif;
+}
+.detalhes p {
+    font-size: 16px;         /* Tamanho normal de leitura */
+    line-height: 1.5;        /* Espaçamento entre linhas */
+    margin-bottom: 20px;     /* Espaço abaixo do parágrafo */
+    margin-left:20%;
+    font-family: Arial, sans-serif;
+}
+.botao-comprar {
+    padding: 12px 25px;           /* Espaço interno: 12px em cima/baixo e 25px nos lados */
+    background-color: #5E17EB;    /* Cor de fundo roxo */
+    color: white;                 /* Cor da fonte branca */
+    font-size: 18px;              /* Tamanho do texto do botão */
+    border: none;                 /* Remove bordas */
+    border-radius: 8px;           /* Cantos arredondados */
+    cursor: pointer;              /* Cursor vira \"mãozinha\" ao passar por cima */
+    margin-top: 10%;
+    margin-left:20%;
+}
+.link-voltar {
+    color: #5E17EB;          /* Cor do texto roxo */
+    text-decoration: none;   /* Remove sublinhado */
+    font-size: 16px;         /* Tamanho do texto */
+}
+.imagem-produto img {
+    border-radius: 10px;  /* Cantos arredondados da imagem */
+}
+/* Rodapé da página */
+footer {
+    background-image: linear-gradient(to bottom, #5E17EB, purple 40%); /* Degradê roxo */
+    color: #fff;  /* Texto branco */
+    padding: 5px;  /* Espaço interno */
+    text-align: center;  /* Texto centralizado */
+}

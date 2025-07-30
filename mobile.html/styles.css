@@ -1,0 +1,151 @@
+/* Corpo da página */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fonte principal */
+    margin: 0;             /* Remove margem externa da página */
+    padding: 0;            /* Remove preenchimento interno da página */
+    overflow: visible;     /* Conteúdo que ultrapassar a tela continua visível */
+}
+/* .pgn{
+     background-color: #F0F8FF;
+} */
+
+/* Cabeçalho principal / barra superior */
+.container {
+    display: flex;  /* Ativa o layout flexível (em linha) */
+    align-items: center;  /* Alinha verticalmente ao centro */
+    padding: 40px;  /* Espaço interno em todos os lados */
+    background-color: purple;  /* Cor de fundo roxa */
+    background-image: linear-gradient(to left, purple 25%, #5E17EB); /* Degradê da esquerda */
+    /* background-color: white;  /* Cor do texto branca */ 
+    font-size: 25px;  /* Tamanho da fonte */
+    font-weight: bold;  /* Deixa o texto em negrito */
+    letter-spacing: 2px;  /* Espaçamento entre letras */
+    /* flex-wrap: nowrap;  Impede quebra de linha (comentado) */
+}
+
+/* Bloco da barra de busca */
+.busca {
+    display: flex;  /* Layout flexível para os elementos da busca */
+    align-items: center;  /* Alinha verticalmente */
+    position: absolute;  /* Posiciona fora do fluxo normal */
+    right: 50px;  /* Distância da borda direita */
+    top: 65px;    /* Distância do topo */
+    background-color: white;  /* Fundo branco */
+    border-radius: 25px;  /* Bordas arredondadas */
+    padding: 10px 30px;  /* Espaço interno: cima/baixo 10px, lados 30px */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);  /* Sombra leve */
+}
+
+/* Formulário da busca */
+.search-form {
+    display: flex;  /* Organiza input e botão lado a lado */
+    align-items: center;  /* Centraliza verticalmente */
+    max-width: 300px;  /* Largura máxima do formulário */
+    margin: 0 auto;  /* Centraliza horizontalmente */
+    border: none;  /* Remove borda */
+    outline: none;  /* Remove borda ao focar */
+    background: transparent;  /* Fundo transparente */
+    font-size: 16px;  /* Tamanho da fonte */
+    width: 250px;  /* Largura total */
+}
+
+/* Campo de entrada (input) da busca */
+.search-input {
+    width: 100%;  /* Ocupa toda a largura disponível */
+    padding: 8px 20px;  /* Espaço interno: cima/baixo 8px, lados 20px */
+    border: 2px solid #ccc;  /* Borda cinza clara */
+    border-radius: 8px;  /* Bordas arredondadas */
+    background: transparent;  /* Fundo transparente */
+}
+
+/* Botão da busca */
+.search-button {
+    padding: 10px 16px;  /* Espaço interno do botão */
+    background-color: rgb(168, 24, 168);  /* Fundo roxo */
+    border: none;  /* Sem borda */
+    border-radius: 4px;  /* Cantos arredondados */
+    cursor: pointer;  /* Cursor em forma de mão */
+    background: transparent;  /* ⚠️ Substitui a cor acima por fundo transparente */
+    font-size: 18px;  /* Tamanho da fonte */
+    color: #030303;  /* Cor do texto (quase preto) */
+}
+
+/* Itens do menu superior */
+.layout0, .layout1, .layout2 {
+    padding-left: 25px;  /* Espaço à esquerda */
+}
+
+/* Imagens dentro dos cards */
+.img-card {
+    width: 100%;  /* Ocupa toda a largura do contêiner */
+    max-width: 300px;  /* Máximo de 300 pixels de largura */
+    height: auto;  /* Altura automática proporcional */
+}
+
+/* Container dos cards de produto */
+.card-container {
+    display: flex;  /* Layout flexível */
+    flex-wrap: wrap;  /* Permite quebra de linha quando necessário */
+    gap: 20px;  /* Espaço entre os cards */
+    justify-content: center;  /* Centraliza os cards horizontalmente */
+    border-radius: 5px;  /* Bordas levemente arredondadas */
+    padding: 2px 16px;  /* Espaçamento interno */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /* Sombra suave */
+    transition: 0.3s;  /* Animação suave ao passar o mouse */
+    margin-left: 10px;  /* Espaço à esquerda */
+    margin-right: 10px; /* Espaço à direita */
+}
+
+/* Estilo dos links nos cards */
+.B {
+    /* margin: 30px 10px;  /* Espaço ao redor do link */ 
+    word-wrap: break-word;  /* Quebra palavras longas automaticamente */
+    text-decoration: none;  /* Remove sublinhado */
+    font-family: Trebuchet MS;  /* Fonte personalizada */
+    font-size: 20px;  /* Tamanho do texto */
+    text-align: left;  /* Alinha o texto à esquerda */
+    margin-top: auto; /* Fixa no final da div */
+    text-rendering: optimizeLegibility;
+}
+
+/* Efeito ao passar o mouse sobre o container do card */
+.card-container:hover {
+    color: #5E17EB;  /* Muda a cor do texto*/
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);  /* Sombra mais intensa */
+}
+
+/* Estilo do preço do produto */
+.preço {
+    display: flex;
+    color: purple;  /* Cor roxa */
+    font-size: 30px;  /* Texto grande */
+    font-weight: bold;  /* Negrito */
+    align-items: center;  /* Centraliza verticalmente */
+    margin-top: auto; /* Fixa no final da div */
+}
+
+/* Título das seções como "SMARTPHONES" ou "ACESSÓRIOS" */
+.SM {
+    text-align: center;  /* Centraliza o texto */
+    margin: 35px;  /* Espaço em volta */
+    font-size: 20px;  /* Tamanho grande do texto */
+    text-rendering: optimizeLegibility;
+}
+
+/* Grade dos produtos */
+.produtos {
+    display: flex;  /* Layout flexível */
+    padding: 15px;  /* Espaço interno */
+    font-weight: 600;  /* Seminegrito */
+    margin: 0 auto;  /* Centraliza horizontalmente */
+    text-align: center;  /* Centraliza texto */
+    justify-content: space-between;  /* Espaço igual entre produtos */
+}
+
+/* Rodapé da página */
+footer {
+    background-image: linear-gradient(to bottom, #5E17EB, purple 40%); /* Degradê roxo */
+    color: #fff;  /* Texto branco */
+    padding: 10px;  /* Espaço interno */
+    text-align: center;  /* Texto centralizado */
+}
