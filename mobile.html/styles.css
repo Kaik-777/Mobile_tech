@@ -123,6 +123,15 @@ body {
     align-items: center;  /* Centraliza verticalmente */
     margin-top: auto; /* Fixa no final da div */
 }
+.centavo {
+    display: flex;
+    color: purple;  /* Cor roxa */
+    font-size: 15px;  /* Texto grande */
+    font-weight: bold;  /* Negrito */
+    align-items: center;  /* Centraliza verticalmente */
+    margin-bottom: 5px;
+    margin-top: auto; /* Fixa no final da div */
+}
 
 /* Título das seções como "SMARTPHONES" ou "ACESSÓRIOS" */
 .SM {

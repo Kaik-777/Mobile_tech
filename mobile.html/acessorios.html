@@ -1,0 +1,158 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Tech</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="mini_img.png" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="index.html">
+            <img src="img.png" alt="Ícone" width= 110px height= 100px>
+        </a>
+
+        <a href="#" style="color: ghostwhite; text-decoration: none;">
+            <div class="layout0">🔥 OFERTAS DO DIA</div>
+        </a>
+
+        <a href="smartphone.html" style="color: ghostwhite; text-decoration: none;">
+            <div class="layout1">📱 SMARTPHONES</div>
+        </a>
+
+        <a href="acessorios.html" style="color: ghostwhite; text-decoration: none;">
+            <div class="layout2">🎧 ACESSÓRIOS</div>
+        </a>
+
+        <div class="busca">
+            <form id="search-form" class="search-form">
+                <input id="search-input" class="search-input" type="text" name="pesquisa" placeholder="Busca Mobile">
+                <button class="search-button" type="submit">Pesquisar</button>
+            </form>
+        </div>
+
+
+    </div>
+
+    <div class="SM">ACESSÓRIOS</div>
+
+    <hr style="height:4px;border-width:0;color:gray;background-color:black" />
+
+    <div class="produtos">
+
+        <div class="card-container">
+            <img src="Produtos/JBLTune.jpg" class="img-card">
+            <a href="#" class="B"><br>Headphone JBL Tune 510BT</a>
+            <div class="preço">R$ 236,55</div>
+        </div>
+
+        <div class="card-container">
+            <img src="Produtos/AirPodsPro.jpg" class="img-card">
+            <a href="#" class="B"><br>Apple AirPods Pro<br> (2ª geração)</a>
+            <div class="preço">R$ 1.999,00</div>
+        </div>
+
+        <div class="card-container">
+            <img src="Produtos/AppleWatch.jpg" class="img-card">
+            <a href="#" class="B"><br>Apple Watch SE GPS<br> Caixa Meia-noite de Alumínio<br> 40 mm Pulseira
+                Meia-noite</a>
+            <div class="preço">R$ 2.374,05</div>
+        </div>
+
+        <div class="card-container">
+            <img src="Produtos/GalaxyWatch5.jpg" class="img-card">
+            <a href="#" class="B"><br>Smartwatch Samsung Galaxy<br> Watch5 BT 44mm Grafite</a>
+            <div class="preço">R$ 1.619,10</div>
+        </div>
+
+        <div class="card-container">
+            <img src="Produtos/SmartSpeaker.jpg" class="img-card">
+            <a href="#" class="B"><br>Smart Speaker Amazon Echo<br> 4ª Geração com Hub de Casa Inteligente</a>
+            <div class="preço">R$ 656,10</div>
+        </div>
+
+    </div>
+
+    <br></br>
+    <br></br>
+    <hr>
+    </hr>
+    <br></br>
+
+    <footer>
+        <p>
+        <address> Visite-nos!<br /> Avenida Império do Sol Nascente, 350 2023<br> Jardim Aurélia, Campinas, SP
+        </address>
+        <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".card-container");
+
+            cards.forEach(card => {
+                card.addEventListener("mouseover", () => {
+                    card.style.transform = "scale(1.05)";
+                    card.style.transition = "transform 0.2s";
+                    card.style.cursor = "pointer";
+                });
+                card.addEventListener("mouseout", () => {
+                    card.style.transform = "scale(1)";
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".card-container");
+
+            // Efeito de zoom
+            cards.forEach(card => {
+                card.addEventListener("mouseover", () => {
+                    card.style.transform = "scale(1.05)";
+                    card.style.transition = "transform 0.2s";
+                    card.style.cursor = "pointer";
+                });
+                card.addEventListener("mouseout", () => {
+                    card.style.transform = "scale(1)";
+                });
+            });
+
+            // Sistema de busca
+            const searchForm = document.getElementById("search-form");
+            const searchInput = document.getElementById("search-input");
+
+            searchForm.addEventListener("submit", function (e) {
+                e.preventDefault(); // Evita recarregar a página
+                const termo = searchInput.value.toLowerCase().trim();
+
+                cards.forEach(card => {
+                    const textoProduto = card.textContent.toLowerCase();
+                    if (textoProduto.includes(termo)) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body>
+<html>
